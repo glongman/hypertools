@@ -1,0 +1,8 @@
+--- 
+format: 1
+handler: 
+  commit: 61cd9b377c0b481384f123dc628a2f8cc5ea5fdf
+  branch: HEAD
+repository_url: git://github.com/glongman/restful-authentication.git
+lock: 
+repository_class: Piston::Git::Repository
