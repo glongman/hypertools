@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+<% require 'base64' %>
+post_entry:
+  uuid:        <%=  uuid = UUID.random_create %>
+  url:         http://test.host/entry/<%= uuid %>
+  created_at:  <%= 5.days.ago.to_s :db  %>
+  updated_at:  <%= 1.second.ago.to_s :db  %>
+  body:        "<%= {:foo => :bar}.to_yaml %>"
+
+foreign_image_entry:
+  uuid:        <%=  uuid = UUID.random_create %>
+  url:         http://other.host/entry/<%= uuid %>
+  created_at:  <%= 1.day.ago.to_s :db  %>
+  updated_at:  <%= 12.hours.ago.to_s :db  %>
+  body:        "<%= {:foo => :bar}.to_yaml %>"

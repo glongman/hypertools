@@ -1,0 +1,18 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+feed_all:
+  user:        quentin 
+  uuid:        <%=  uuid = UUID.random_create %>
+  name:        Quentin's Feed'
+  type:        user
+  private:     false
+  body:        "<%= {:foo => :bar}.to_yaml %>"
+
+feed_home:
+  user:        quentin 
+  uuid:        <%=  uuid = UUID.random_create %>
+  name:        Home Feed
+  type:        user
+  private:     false
+  body:        "<%= {:foo => :bar}.to_yaml %>"
+
