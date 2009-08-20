@@ -1,0 +1,28 @@
+body {
+	color: black;
+	font-family: Arial, sans-serif;
+	font-size: 15px;
+}
+
+a {
+	color #0000CC;
+	text-decoration: none;
+}
+
+#Top {
+	border-bottom: 1px solid silver; 
+	padding: 5px; 
+	background: rgb(238, 238, 238) none repeat scroll 0% 0%; 
+	-moz-background-clip: -moz-initial; 
+	-moz-background-origin: -moz-initial; 
+	-moz-background-inline-policy: -moz-initial; 
+	font-weight: bold; 
+	text-align: center;
+}
+
+#Content {
+	margin: auto;
+	max-width: 925px;
+	padding: 25px;
+	position: relative;
+}
