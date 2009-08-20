@@ -1,0 +1,14 @@
+<div id="flash">
+	<ul class="flash-error" style="display:none; overflow:hidden"><li>&nbsp;</li></ul>
+	<ul class="flash-notice" style="display:none; overflow:hidden"><li>&nbsp;</li></ul>
+</div>
+<% if flash[:notice] -%>
+    <% javascript_tag do%>
+	$(document).ready(function() {$.flash_notice("<%=flash[:notice]%>")}) 
+	<% end %>
+<% end -%>
+<% if flash[:error] -%>
+	<% javascript_tag do%>
+	$(document).ready(function() {$.flash_error("<%=flash[:error]%>")})
+	<% end %>
+<% end -%>

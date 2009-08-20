@@ -14,14 +14,14 @@ class UsersControllerTest < ActionController::TestCase
   def test_redirect_if_user_already_exists_on_create
     assert_no_difference 'User.count' do
       create_user
-      assert_redirected_to unauthorized_sessions_url
+      assert_redirected_to public_home_path
     end
   end
   
   def test_redirect_if_user_already_exists_on_new
     assert_no_difference 'User.count' do
       get :new
-      assert_redirected_to unauthorized_sessions_url
+      assert_redirected_to public_home_path
     end
   end
 

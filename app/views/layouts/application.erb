@@ -10,10 +10,10 @@
 		#Top, div.Content { display: none }
 	</style>
 </noscript>
-<%= javascript_include_tag :all %> 
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js'></script>
+<%= javascript_include_tag :all %>
 <%= stylesheet_link_tag :all%>
 <%= yield :head %>
-
 </head>
 <body class="<%= yield :body_classes %>">
 	<noscript>
@@ -32,6 +32,7 @@
 	<%= render_top %>
   </div>
   <div id='Content'>
+	<%= render :partial => 'shared/flash_messages' %>	
 	<%= yield :layout %>
   </div>
 </body>

@@ -26,3 +26,28 @@ a {
 	padding: 25px;
 	position: relative;
 }
+
+#flash {
+  color: #000;
+  background: #fff;
+}
+
+#flash ul {
+  list-style-type: none;
+}
+
+#flash .flash-error {
+	background-color:#FEB8B8;
+	border-color:#D74848;
+}
+
+#flash .flash-notice {
+	background-color:#66EDFE;
+	border-color:#66B3FE;
+}
+
+.flash-error, .flash-notice {
+	border:1px solid;
+	font-weight:bold;
+	padding:8px;
+}

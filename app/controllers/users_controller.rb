@@ -14,10 +14,10 @@ class UsersController < ApplicationController
     success = @user && @user.save
     if success && @user.errors.empty?
       self.current_user = @user # !! now logged in
-      redirect_back_or_default('/')
-      flash[:notice] = "Congratulations!"
+      flash[:notice] = "Congratulations! You now have a feed!"
+      redirect_back_or_default('/home')
     else
-      flash[:error]  = "We couldn't set your account, sorry."
+      flash.now[:error]  = "We couldn't set your account. Fix the errors below and submit the form again."
       render :action => 'new'
     end
   end
@@ -25,6 +25,9 @@ class UsersController < ApplicationController
   protected
   
   def allow_only_one_user_create
-    redirect_to unauthorized_sessions_path if User.count > 0 
+    if User.count > 0 
+      flash[:error] = "This feed is already setup for #{User.first.name}." 
+      redirect_to public_home_path
+    end
   end
 end
